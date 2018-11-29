@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
+
+
+$main-txt-color1: #ffffff;
+$main-txt-color2: #242424;
+$brown: #b88b58;
+$main-font: 'Montserrat', sans-serif;
+$bold : 700;
+$light: 300;
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background: #f7f7f7;
+  margin: 0 auto;
+}
+
+nav {
+  background: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  img {
+    margin-left: 12.65%;
+    width: 50px;
+    height: 50px;
+  }
+  a {
+    color: $main-txt-color1;
+    font-family: $main-font;
+    font-weight: $bold;
+    font-size: 14px;
+    height: 100px;
+    min-width: 60px;
+    text-align: center;
+    margin: 0 1.35% 0 1.35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    &:first-of-type {
+      margin: 0 1.35% 0 7.6%;
+    }
+    &:last-of-type {
+      margin-right: 9.1%;
+    }
+    &:hover {
+      cursor: pointer;
+      border-bottom: 5px solid $brown;
+      transition: border .2s ease-in;
+    }
+  }
+  .fa {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.toggle {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: right;
+  box-sizing: border-box;
+  color: $brown;
+  font-size: 35px;
+  position: fixed;
+  top:0;
+  right: 0;
+  display: none;
+}
+
+@media (max-width:1050px) {
+  nav{
+    img {
+      margin-left: 1%;
+    }
+    a {
+      font-size: 12px;
+      &:first-of-type {
+        margin-left: 1%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .toggle {
+    display: block;
+  }
+  nav {
+    display: block;
+    
+    img {
+      margin: 0 auto;
+      display: block;
+      width: 80px;
+      height: 80px;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      font-size: 18px;
+      display: none;
+      &:hover {
+        border: none;
+      }
+      &:first-of-type {
+        margin-left: 0;
+
+      }
+    }
+    .active {
+      display: block;
+    }
+  }
+}
